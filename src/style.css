@@ -1,9 +1,16 @@
+body {
+  font-family: Helvetica;
+}
+
 form {
   top: 10px;
 }
 
 h1 {
   color: #79baf7;
+  font-weight: 100;
+  font-size: 24px;
+  margin-bottom: 0;
 }
 
 ul {
@@ -12,6 +19,10 @@ ul {
   padding: 0;
   margin: 0;
   font-size: 10px;
+}
+li {
+  padding: 0;
+  margin: 0;
 }
 
 p {
@@ -31,9 +42,11 @@ p {
   color: #79baf7;
 }
 .app {
-  border: 1px solid;
+  border: 1px solid #c9c9c9;
   border-radius: 8px;
   padding: 20px;
+}
+.app-code-source {
   margin: 15px auto;
-  max-width: 550px;
+  max-width: 500px;
 }
