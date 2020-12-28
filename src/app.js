@@ -24,15 +24,19 @@ let days = [
 dateElement.innerHTML = `${days[day]}, ${hours}:${minutes}`;
 
 function showWeather(response) {
+  let iconElement = document.querySelector("#icon");
+
   console.log(response.data);
   document.querySelector("#location").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp);
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
-  document.querySelector("#description").innerHTML =
+  document.querySelector("#weatherDescription").innerHTML =
     response.data.weather[0].main;
+  document.querySelector("#wind").innerHTML = response.data.wind.speed;
 
+  iconElement.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     celsiusTemperature = response.data.main.temp;
 }
 
